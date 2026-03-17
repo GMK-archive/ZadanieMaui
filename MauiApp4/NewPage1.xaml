@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp4.NewPage1"
+             Title="NewPage1">
+    <VerticalStackLayout>
+        <Label Text="Wizyta u weterynarza" />
+        
+        <Entry x:Name="EntryName" Placeholder="Imie i nazwisko właściciela" />
+        <Picker x:Name="PickerEntry" SelectedIndexChanged="PickerEntry_SelectedIndexChanged" >
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Pies</x:String>
+                    <x:String>Kot</x:String>
+                    <x:String>Świnka morska</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <HorizontalStackLayout
+            >
+            <Label Text="Ile lat ? "  x:Name="AgeLabel"/>
+            <Slider x:Name="SliderEntry" Minimum="1" Maximum="18" Value="1"  WidthRequest="100" ValueChanged="SliderEntry_ValueChanged"/>
+        </HorizontalStackLayout>
+            
+        <Entry x:Name="EntryReason"  />
+        <TimePicker x:Name="TimePickerEntry" />
+        <Button x:Name="EntryButton"  Clicked="EntryButton_Clicked"/>
+        <Label x:Name="ResultLabel" />
+    </VerticalStackLayout>
+</ContentPage>
