@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp4.NewPage1"
-             Title="NewPage1">
+             Title="Vet" BackgroundColor="LightGreen">
     <VerticalStackLayout>
-        <Label Text="Wizyta u weterynarza" />
+        <Label Text="Wizyta u weterynarza"  BackgroundColor="DarkGreen" FontSize="Large"/>
         
         <Entry x:Name="EntryName" Placeholder="Imie i nazwisko właściciela" />
         <Picker x:Name="PickerEntry" SelectedIndexChanged="PickerEntry_SelectedIndexChanged" >
@@ -22,9 +22,9 @@
             <Slider x:Name="SliderEntry" Minimum="1" Maximum="18" Value="1"  WidthRequest="100" ValueChanged="SliderEntry_ValueChanged"/>
         </HorizontalStackLayout>
             
-        <Entry x:Name="EntryReason"  />
-        <TimePicker x:Name="TimePickerEntry" />
-        <Button x:Name="EntryButton"  Clicked="EntryButton_Clicked"/>
+        <Entry x:Name="EntryReason" />
+        <TimePicker x:Name="TimePickerEntry" Time="16:00:00" Format="HH:mm"/>
+        <Button x:Name="EntryButton"  Clicked="EntryButton_Clicked" Text="ok"/>
         <Label x:Name="ResultLabel" />
     </VerticalStackLayout>
 </ContentPage>
