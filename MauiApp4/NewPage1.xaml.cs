@@ -15,9 +15,10 @@ public partial class NewPage1 : ContentPage
         string animal = PickerEntry.SelectedItem?.ToString();
         int age = (int)SliderEntry.Value;
         string reason = EntryReason.Text;
-        string day = TimePickerEntry.Time.ToString(@"hh\:mm");
-        DisplayAlert("test", $"{name},{animal},{age},{reason},{day}", "ok");
-        ResultLabel.Text = $"{name},{animal},{age},{reason},{day}";
+
+
+        DisplayAlert("test", $"{name},{animal},{age},{reason}", "ok");
+        ResultLabel.Text = $"{name},{animal},{age},{reason}";
     }
 
     private void PickerEntry_SelectedIndexChanged(object sender, EventArgs e)
